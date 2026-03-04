@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>AdoptMe</title>
+
+<style>
+body{
+background:linear-gradient(135deg,#000,#1b1b1b);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+font-family:Arial;
+color:white;
+text-align:center;
+}
+
+button{
+width:140px;
+height:140px;
+border-radius:50%;
+border:none;
+background:red;
+color:white;
+font-size:28px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 25px rgba(255,0,0,0.7);
+}
+
+button:hover{
+transform:scale(1.15);
+}
+
+#text{
+margin-top:30px;
+font-size:40px;
+display:none;
+animation:pop 0.6s ease;
+}
+
+img{
+margin-top:20px;
+max-width:420px;
+border-radius:14px;
+display:none;
+animation:zoom 0.6s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0.3);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+@keyframes zoom{
+0%{transform:scale(0.4) rotate(-10deg);opacity:0;}
+100%{transform:scale(1) rotate(0);opacity:1;}
+}
+
+.site{
+position:fixed;
+bottom:15px;
+font-size:18px;
+opacity:0.6;
+}
+</style>
+
+</head>
+<body>
+
+<button onclick="go()">Click</button>
+
+<h1 id="text">Emir Efe Karının Elleri Çok Güzel</h1>
+
+<img id="photo" src="resim.png">
+
+<div class="site">adoptme</div>
+
+<script>
+function go(){
+document.getElementById("text").style.display="block";
+document.getElementById("photo").style.display="block";
+}
+</script>
+
+</body>
+</html>
